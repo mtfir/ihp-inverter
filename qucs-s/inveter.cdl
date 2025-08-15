@@ -1,0 +1,9 @@
+* Qucs 25.2.0  /home/mtfir/microelectronics/projects/ihp-inverter/qucs-s/inverter.sch
+.SUBCKT inverter A Y VDD VSS
+
+
+
+
+m1 VDD A Y VDD sg13_lv_pmos w=0.15U l=0.13U ng=1 m=1 mismatch=1 as=0 ad=0 pd=0 ps=0 trise=0 z1=0.34E-6 z2=0.38E-6 wmin=0.15E-6 rfmode=0 pre_layout=1
+m2 Y A VSS VSS sg13_lv_nmos w=0.15U l=0.13U ng=1 m=1 mismatch=1 as=0 ad=0 pd=0 ps=0 trise=0 z1=0.34E-6 z2=0.38E-6 wmin=0.15E-6 rfmode=0 pre_layout=1
+.ENDS
