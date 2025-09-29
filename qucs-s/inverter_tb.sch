@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=-169,-21,748,611,1.61058,0,182>
+  <View=-211,74,649,568,1.79248,0,82>
   <Grid=10,10,1>
   <DataSet=inverter_tb.dat>
   <DataDisplay=inverter_tb.dpl>
@@ -38,8 +38,8 @@
   <300 310 300 310 "VOUT" 310 310 0 "">
 </Wires>
 <Diagrams>
-  <Rect 400 410 240 160 3 #c0c0c0 1 00 1 0 0.2 1.13684 1 -0.12 0.5 1.32 1 -1 1 1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/sw1.v(vout)" #0000ff 0 3 0 0 0>
+  <Rect 410 410 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
+	<"ngspice/sw1.v(vout)" #ff0000 0 3 0 0 0>
   </Rect>
 </Diagrams>
 <Paintings>

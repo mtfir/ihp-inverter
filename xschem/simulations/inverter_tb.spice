@@ -1,0 +1,49 @@
+** sch_path: /home/mtfir/microelectronics/projects/ihp-inverter/xschem/inverter_tb.sch
+**.subckt inverter_tb
+xinv net1 vin vout GND inverter
+Vin vin GND 0
+Vcc net1 GND 1.2
+**** begin user architecture code
+
+
+.control
+let vin_array = vector(121)
+let vout_array = vector(121)
+let index = 0
+repeat 121
+alter @Vin[dc] index*0.01
+op
+let vin_array[index] = v(vin)
+let vout_array[index] = v(vout)
+let index = index + 1
+end
+plot vout_array vin_array vs vin_array
+
+alter @Vin[dc] 0
+alter @Vin[pulse] [ 0 1.2 1n 1n 1n 10n 20n 5]
+plot vin
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/mtfir/microelectronics/projects/ihp-inverter/xschem/inverter.sym
+** sch_path: /home/mtfir/microelectronics/projects/ihp-inverter/xschem/inverter.sch
+.subckt inverter VDD A Y VSS
+*.ipin A
+*.opin Y
+*.iopin VDD
+*.iopin VSS
+XM1 Y A VSS VSS sg13_lv_nmos w=150n l=130n ng=1 m=1 rfmode=1
+XM2 Y A VDD VDD sg13_lv_pmos w=150n l=130n ng=1 m=1 rfmode=1
+**** begin user architecture code
+
+.lib cornerMOSlv.lib mos_tt
+
+**** end user architecture code
+.ends
+
+.GLOBAL GND
+.end

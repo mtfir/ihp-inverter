@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=-72,-122,984,399,1.98517,337,85>
+  <View=124,-36,821,339,2.16757,11,9>
   <Grid=10,10,1>
   <DataSet=inverter.dat>
   <DataDisplay=inverter.dpl>
@@ -35,7 +35,7 @@
   <Port Y 1 460 140 33 -18 0 2 "4" 1 "analog" 0>
   <Port A 1 430 140 -75 -20 0 0 "3" 1 "analog" 0>
   <Port VSS 1 460 200 -15 33 0 1 "2" 1 "analog" 0>
-  <SpiceLib SpiceLib1 1 310 30 -13 18 0 0 "cornerMOSlv.lib" 1 "mos_tt" 1>
+  <SpiceLib SpiceLib1 1 200 20 -13 18 0 0 "cornerMOSlv.lib" 1 "mos_tt" 1>
 </Components>
 <Wires>
   <430 110 430 140 "" 0 0 0 "">
